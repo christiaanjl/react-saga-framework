@@ -1,14 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
 const remoteApi = axios.create({
-    baseURL: process.env.REACT_APP_USERS_SERVICE,
+  baseURL: process.env.REACT_APP_USERS_SERVICE,
 });
 
 export const fetchUsers = () => {
-    return remoteApi.get('users');
+  return remoteApi.get("users");
 };
 
-
 export const fetchTodos = (id) => {
-    return remoteApi.get(`users/${id}/todos`);
+  return remoteApi.get(`users/${id}/todos`);
 };

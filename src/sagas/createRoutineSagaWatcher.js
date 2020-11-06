@@ -1,4 +1,4 @@
-import { put, takeLatest } from 'redux-saga/effects'
+import { put, takeLatest } from "redux-saga/effects";
 
 /**
  * Returns a 'takeLatest' TRIGGER watcher for the provided Saga Routine.
@@ -12,29 +12,27 @@ import { put, takeLatest } from 'redux-saga/effects'
  * @returns {routineSagaWatcher} Routine TRIGGER event listener.
  */
 export function createRoutineSagaWatcher(routine, reduxEffect) {
-    function* routineSaga(action) {
-        yield put(routine.request());
+  function* routineSaga(action) {
+    yield put(routine.request());
 
-        try {
-            const response = yield reduxEffect(action);
+    try {
+      const response = yield reduxEffect(action);
 
-            if(response.status === 200) {
-                yield put(routine.success(response.data));
-            } else {
-                yield put(routine.failure(response.statusText));
-            }
-        } catch (e) {
-            yield put(routine.failure(e.message));
-        } finally {
-            yield put(routine.fulfill());
-        }
+      if (response.status === 200) {
+        yield put(routine.success(response.data));
+      } else {
+        yield put(routine.failure(response.statusText));
+      }
+    } catch (e) {
+      yield put(routine.failure(e.message));
+    } finally {
+      yield put(routine.fulfill());
     }
+  }
 
+  function* routineSagaWatcher() {
+    yield takeLatest(routine.TRIGGER, routineSaga);
+  }
 
-    function* routineSagaWatcher() {
-        yield takeLatest(routine.TRIGGER, routineSaga);
-    }
-
-    return routineSagaWatcher;
+  return routineSagaWatcher;
 }
-

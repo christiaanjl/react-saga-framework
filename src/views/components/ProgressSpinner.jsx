@@ -1,25 +1,24 @@
-import {CircularProgress} from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const ProgressSpinner = () => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root} >
-            <CircularProgress size='3rem' />
-        </div>
-    );
+  return (
+    <div className={classes.root}>
+      <CircularProgress size="3rem" />
+    </div>
+  );
 };
 
 const useStyles = makeStyles({
-    root: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: 300
-    }
+  root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 300,
+  },
 });
 
 export default ProgressSpinner;
-
