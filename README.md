@@ -58,6 +58,7 @@ src
 │   │   │   └── UsersList.jsx
 │   │   └── UsersPage.jsx
 │   └── App.jsx
+├── .env
 ├── index.js
 └── setupTests.js
 ```
