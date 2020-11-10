@@ -10,7 +10,7 @@ import { Todo } from "../../../constants/Types";
 const TodoCard = (props) => {
   const classes = useStyles();
   const {
-    todo: { id, completed },
+    todo: { id, completed, title },
   } = props;
 
   return (
@@ -22,7 +22,7 @@ const TodoCard = (props) => {
       >
         {props.todo.completed ? <CheckBoxIcon /> : <CheckBoxOutlineBlankIcon />}
       </IconButton>
-      {<div style={{ padding: 5 }}>{props.todo.title}</div>}
+      {<div style={{ padding: 5 }}>{title}</div>}
     </div>
   );
 };

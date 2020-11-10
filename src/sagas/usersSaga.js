@@ -3,6 +3,4 @@ import * as api from "../api/remoteApi";
 import { fetchUsers } from "../store/users/UsersAction";
 import { createRoutineSagaWatcher } from "./createRoutineSagaWatcher";
 
-export default createRoutineSagaWatcher(fetchUsers, (_) =>
-  call(api.fetchUsers)
-);
+export default createRoutineSagaWatcher(fetchUsers, () => call(api.fetchUsers));

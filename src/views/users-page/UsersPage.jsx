@@ -8,13 +8,13 @@ import { bindPromiseCreators } from "redux-saga-routines";
 import TodoList from "./components/TodoList";
 import PropTypes from "prop-types";
 
-const UsersPage = (props) => {
+const UsersPage = ({ fetchUsersAsync }) => {
   const classes = useStyles();
 
   useEffect(() => {
-    props
-      .fetchUsersAsync()
-      .then((result) => "optionally update local state if needed");
+    fetchUsersAsync().then(
+      (result) => "optionally update local state if needed"
+    );
     // eslint-disable-next-line
   }, []);
 
