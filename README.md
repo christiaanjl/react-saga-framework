@@ -4,6 +4,11 @@
 
 An amalgamation of ideas to form a sensible set of conventions for larger scale React projects. Includes example code to guide coding conventions and program structure for new projects.
 
+Other templates:
+* [React Context](https://github.com/christiaanjl/react-context-template)
+* [Redux](https://github.com/christiaanjl/react-redux-template)
+* [Angular](https://github.com/christiaanjl/angular-template)
+
 package.json inclusions:
 * Redux
 * Redux Actions
