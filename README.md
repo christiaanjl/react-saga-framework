@@ -1,6 +1,6 @@
 
 
-# React-Saga Framework 
+# React: Redux-Saga Framework 
 
 An amalgamation of ideas to form a sensible set of conventions for larger scale React projects. Includes example code to guide coding conventions and program structure for new projects.
 
