@@ -1,15 +1,8 @@
 
 
-# React: Redux-Saga Framework 
+# Redux-Saga demo
 
-An amalgamation of ideas to form a sensible set of conventions for larger scale React projects. Includes example code to guide coding conventions and program structure for new projects.
-
-Other templates:
-* [React Context](https://github.com/christiaanjl/react-context-template)
-* [Redux](https://github.com/christiaanjl/react-redux-template)
-* [Angular](https://github.com/christiaanjl/angular-template)
-
-package.json inclusions:
+Demo project showing use of the following packages:
 * Redux
 * Redux Actions
 * Redux Saga
@@ -20,6 +13,12 @@ package.json inclusions:
 * lodash
 * axios
 * ...
+
+Other templates:
+* [React Context](https://github.com/christiaanjl/react-context-template)
+* [Redux](https://github.com/christiaanjl/react-redux-template)
+* [Angular](https://github.com/christiaanjl/angular-template)
+
 
 ## UI
 Initial project fetches users and their to-do items from [jsonplaceholder](https://jsonplaceholder.typicode.com)
